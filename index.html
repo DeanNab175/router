@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADB Router Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container container">
+        <!-- Left Sidebar -->
+        <section class="left-sidebar">
+            <div class="navbar">
+                <nav class="nav">
+                    <h3 class="nav__title" data-title>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="nav__icon">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>                     
+                        <span>Status</span>
+                    </h3>
+                </nav>
+
+                <nav class="nav">
+                    <h3 class="nav__title" data-title>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav__icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                        </svg>                          
+                        <span>Network</span>
+                    </h3>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active" data-id="internet">Internet</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-id="lan">LAN</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-id="iptv">IPTV</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-id="dhcp_server">DHCP Server</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-id="dynamic_dns">Dynamic DNS</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-id="static_routing">Static Routing</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="nav">
+                    <h3 class="nav__title" data-title>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nav__icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" />
+                        </svg>
+                        <span>Wireless</span>
+                    </h3>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-id="wireless_setting">Wireless Setting</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-id="wps">WPS</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link active" data-id="wireless_schedule">Wireless Schedule</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-id="wireless_onemesh">OneMesh</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <article class="page-setting">
+                <div class="page-setting__contents">
+                    <div class="page-setting__content" id="wireless_setting">
+                        <section class="tab">
+                            <div class="tab__button-wrapper">
+                                <button class="tab__button" data-id="quick_setup">Quick Setup</button>
+                                <button class="tab__button" data-id="basic">Basic</button>
+                                <button class="tab__button active" data-id="advanced">Advanced</button>
+                            </div>
+            
+                            <div class="page-wrap">
+                                <div class="tab__content" id="quick_setup">
+                                    <div class="heading-wrap">
+                                        <h2 class="heading">Quick Setup</h2>
+                                    </div>
+                                </div>
+            
+                                <div class="tab__content" id="basic">
+                                    <div class="heading-wrap">
+                                        <h2 class="heading">Basic</h2>
+                                    </div>
+                                </div>
+            
+                                <div class="tab__content active" id="advanced">
+                                    <form action="#" method="post">
+                                        <div class="heading-wrap">
+                                            <h2 class="heading">Smart Connect</h2>
+                                        </div>
+            
+                                        <div class="form-controls-wrap mb-3">
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Smart Connect :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="toggle-switch">
+                                                        <input type="checkbox" name="smart_connect" id="smart_connect" class="toggle-switch__input" />
+                                                        <label for="smart_connect" class="control-label toggle-switch__label">
+                                                            <span class="toggle-switch__button"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="heading-wrap">
+                                            <h2 class="heading">Wireless Settings</h2>
+                                        </div>
+            
+                                        <div class="form-controls-wrap">
+            
+                                            <div class="control row">
+                                                <div class="col-left"></div>
+                                                <div class="col-right">
+                                                    <div class="toggle-switch">
+                                                        <input type="checkbox" name="wireless_radio" id="wireless_radio" class="toggle-switch__input" checked />
+                                                        <label for="wireless_radio" class="control-label toggle-switch__label">
+                                                            <span class="toggle-switch__button"></span>
+                                                            <span class="toggle-switch__text">Enable wireless radio</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Network Name (SSID) :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <input type="text" name="ssid" id="ssid">
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Security :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="select">
+                                                        <select id="security" name="security">
+                                                            <option value="wpa2_wpa3">WPA2/WPA3-Personal</option>
+                                                            <option value="wpa2">WPA2</option>
+                                                            <option value="wpa3">WPA3</option>
+                                                        </select>
+                                                        <span class="focus"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Version :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="radio-control-group">
+                                                        <label class="control-label radio-control">
+                                                            <input type="radio" name="version" id="auto" class="radio-control__input" checked />
+                                                            <span class="radio-control__text">Auto</span>
+                                                        </label>
+                                                        <label class="control-label radio-control">
+                                                            <input type="radio" name="version" id="wpa3_sae" class="radio-control__input" />
+                                                            <span class="radio-control__text">WPA3-SAE</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Pasword :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <input type="password" name="password" id="password">
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Mode :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="select">
+                                                        <select id="mode" name="mode">
+                                                            <option value="802mixed">802.11a/n/ac mixed</option>
+                                                            <option value="802">802.11a</option>
+                                                            <option value="mixed">mixed</option>
+                                                        </select>
+                                                        <span class="focus"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Channel Width :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="select">
+                                                        <select id="channel_width" name="channel_width">
+                                                            <option value="auto">Auto</option>
+                                                            <option value="test">test</option>
+                                                            <option value="test1">test1</option>
+                                                        </select>
+                                                        <span class="focus"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Channel :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="select">
+                                                        <select id="channel" name="channel">
+                                                            <option value="auto">Auto</option>
+                                                            <option value="test">test</option>
+                                                            <option value="test1">test1</option>
+                                                        </select>
+                                                        <span class="focus"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Transmit Power :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="radio-control-group">
+                                                        <label class="control-label radio-control">
+                                                            <input type="radio" name="transmit_power" id="low" class="radio-control__input" />
+                                                            <span class="radio-control__text">Low</span>
+                                                        </label>
+                                                        <label class="control-label radio-control">
+                                                            <input type="radio" name="transmit_power" id="middle" class="radio-control__input" checked />
+                                                            <span class="radio-control__text">Middle</span>
+                                                        </label>
+                                                        <label class="control-label radio-control">
+                                                            <input type="radio" name="transmit_power" id="high" class="radio-control__input" />
+                                                            <span class="radio-control__text">High</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Airtime Fairness Feature :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="toggle-switch">
+                                                        <input type="checkbox" name="airtime_fairness" id="airtime_fairness" aria-label="Enable Airtime Fairness" class="toggle-switch__input" />
+                                                        <label for="airtime_fairness" class="control-label toggle-switch__label">
+                                                            <span class="toggle-switch__button"></span>
+                                                            <span class="toggle-switch__text">Enable Airtime Fairness</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Multi-User MIMO Feature :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="toggle-switch">
+                                                        <input type="checkbox" name="multi_user_mimo" id="multi_user_mimo" aria-label="Enable Multi-User MIMO" class="toggle-switch__input" />
+                                                        <label for="multi_user_mimo" class="control-label toggle-switch__label">
+                                                            <span class="toggle-switch__button"></span>
+                                                            <span class="toggle-switch__text">Enable Multi-User MIMO</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                        </div>
+            
+                                        <div class="btn-wrap btn-wrap--end mt-5 mb-4">
+                                            <button type="submit" name="submit" class="btn btn-primary">Save</button>
+                                        </div>
+                        
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="page-setting__content" id="wps">
+                        <p>WPS settings</p>
+                    </div>
+                    <div class="page-setting__content active" id="wireless_schedule">
+                        <section class="tab">
+                            <div class="tab__button-wrapper">
+                                <button class="tab__button" data-id="ws_advanced">Advanced</button>
+                                <button class="tab__button active" data-id="ws_frm_input_states">Form input states</button>
+                            </div>
+            
+                            <div class="page-wrap">            
+                                <div class="tab__content" id="ws_advanced">
+                                    <form action="#" method="post">
+                                        <div class="heading-wrap">
+                                            <h2 class="heading">Wireless Schedule</h2>
+                                            <h4 class="subheading">Schedule when to automatically turn off your wireless network.</h4>
+                                        </div>
+            
+                                        <div class="form-controls-wrap mb-3">
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Wireless Schedule :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="toggle-switch">
+                                                        <input type="checkbox" name="input_wireless_schedule" id="input_wireless_schedule" class="toggle-switch__input" />
+                                                        <label for="input_wireless_schedule" class="control-label toggle-switch__label">
+                                                            <span class="toggle-switch__button"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="note"><strong>Note: </strong>Before enabling Wireless Off Time Schedule, please go to Advanced->System Tools->System Time to check <strong>Get from Internet</strong> is selected.</p>
+                                            <div class="display-hidden-settings">
+                                                <p>Current Time: 2021-07-08 5:06:35 PM</p>
+
+                                                <div class="btn-wrap btn-wrap--end mt-3 mb-1">
+                                                    <button type="button" class="btn btn__icon btn-transparent btn-primary__icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                        </svg>
+                                                        <span class="text">Add</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="table-info">
+                                                    <div class="table-row table-row__head">
+                                                        <div class="table-col">Wireless Off Time</div>
+                                                        <div class="table-col">Repeat</div>
+                                                        <div class="table-col">Modify</div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-col">12 AM - 12 AM (next day)</div>
+                                                        <div class="table-col">Weekends</div>
+                                                        <div class="table-col">
+                                                            <div class="btn-wrap">
+                                                                <button type="button" class="btn btn__icon btn__icon-only">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                                                    </svg>                                                                      
+                                                                </button>
+                                                                <button type="button" class="btn btn__icon btn__icon-only">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                                    </svg>                                                                                                                                         
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-col">12 AM - 12 AM (next day)</div>
+                                                        <div class="table-col">Weekends</div>
+                                                        <div class="table-col">
+                                                            <div class="btn-wrap">
+                                                                <button type="button" class="btn btn__icon btn__icon-only">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                                                                    </svg>                                                                      
+                                                                </button>
+                                                                <button type="button" class="btn btn__icon btn__icon-only">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                                    </svg>                                                                                                                                         
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="table-row no-entries">
+                                                        <div class="table-col">No Entries</div>
+                                                    </div> -->
+                                                </div>
+
+                                                <section class="popup">
+                                                    <header class="popup__header">
+                                                        <h3 class="popup__title">Add Schedule</h3>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="popup__close">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                                        </svg>                                                          
+                                                    </header>
+                                                    <article class="popup__body">
+
+                                                        <form action="#" method="post">
+                                                            <div class="form-controls-wrap mb-3">
+                                                                <div class="control row">
+                                                                    <div class="col-left">
+                                                                        <span class="control-name">Wireless Off Time :</span>
+                                                                    </div>
+                                                                    <div class="col-right">
+                                                                        <div class="select-row">
+                                                                            <label class="select-label">From</label>
+                                                                            <div class="select">
+                                                                                <select id="ws_from_hour" name="ws_from_hour">
+                                                                                    <option value="auto">12</option>
+                                                                                    <option value="test">11</option>
+                                                                                    <option value="test1">10</option>
+                                                                                </select>
+                                                                                <span class="focus"></span>
+                                                                            </div>
+                                                                            <div class="select">
+                                                                                <select id="ws_from_ampm" name="ws_from_ampm">
+                                                                                    <option value="auto">AM</option>
+                                                                                    <option value="test">PM</option>
+                                                                                </select>
+                                                                                <span class="focus"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="select-row">
+                                                                            <label class="select-label">To</label>
+                                                                            <div class="select">
+                                                                                <select id="ws_to_hour" name="ws_to_hour">
+                                                                                    <option value="auto">12</option>
+                                                                                    <option value="test">11</option>
+                                                                                    <option value="test1">10</option>
+                                                                                </select>
+                                                                                <span class="focus"></span>
+                                                                            </div>
+                                                                            <div class="select">
+                                                                                <select id="ws_to_ampm" name="ws_to_ampm">
+                                                                                    <option value="auto">AM</option>
+                                                                                    <option value="test">PM</option>
+                                                                                </select>
+                                                                                <span class="focus"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+
+                                                    </article>
+                                                    <footer class="popup__footer"></footer>
+                                                </section>
+                                            </div>
+                                        </div>
+                        
+                                    </form>
+                                </div>
+
+                                <div class="tab__content active" id="ws_frm_input_states">
+                                    <form action="#" method="post">
+                                        <div class="heading-wrap">
+                                            <h2 class="heading">Form input states</h2>
+                                        </div>
+                                        
+                                        <p class="title bold">Checkbox states</p>
+                                        <div class="separator"></div>
+
+                                        <div class="form-controls-wrap mb-3">
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Normal :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="toggle-switch">
+                                                        <input type="checkbox" name="nrml_checkbox" id="nrml_checkbox" class="toggle-switch__input" />
+                                                        <label for="nrml_checkbox" class="control-label toggle-switch__label">
+                                                            <span class="toggle-switch__button"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Checked :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="toggle-switch">
+                                                        <input type="checkbox" name="nrml_label_checkbox" id="nrml_label_checkbox" class="toggle-switch__input" checked />
+                                                        <label for="nrml_label_checkbox" class="control-label toggle-switch__label">
+                                                            <span class="toggle-switch__button"></span>
+                                                            <span class="toggle-switch__text">Disabled checkbox label</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Disabled :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="toggle-switch">
+                                                        <input type="checkbox" name="ds_checkbox" id="ds_checkbox" class="toggle-switch__input" disabled />
+                                                        <label for="ds_checkbox" class="control-label toggle-switch__label">
+                                                            <span class="toggle-switch__button"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Disabled label :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="toggle-switch">
+                                                        <input type="checkbox" name="ds_checkbox_label" id="ds_checkbox_label" aria-label="Enable Airtime Fairness" class="toggle-switch__input" disabled checked />
+                                                        <label for="ds_checkbox_label" class="control-label toggle-switch__label">
+                                                            <span class="toggle-switch__button"></span>
+                                                            <span class="toggle-switch__text">Disabled checkbox label</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <p class="title bold">Radio states</p>
+                                        <div class="separator"></div>
+                                        
+                                        <div class="form-controls-wrap mb-3">
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Normal :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="radio-control-group">
+                                                        <label class="control-label radio-control">
+                                                            <input type="radio" name="nrml_radio" id="low" class="radio-control__input" />
+                                                            <span class="radio-control__text">Unchecked</span>
+                                                        </label>
+                                                        <label class="control-label radio-control">
+                                                            <input type="radio" name="nrml_radio" id="middle" class="radio-control__input" checked />
+                                                            <span class="radio-control__text">Checked</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Disabled :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="radio-control-group">
+                                                        <label class="control-label radio-control">
+                                                            <input type="radio" name="ds_radio" id="low" class="radio-control__input" disabled />
+                                                            <span class="radio-control__text">Disabled</span>
+                                                        </label>
+                                                        <label class="control-label radio-control">
+                                                            <input type="radio" name="ds_radio" id="middle" class="radio-control__input" disabled checked />
+                                                            <span class="radio-control__text">Checked and disabled</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p class="title bold">Textbox states</p>
+                                        <div class="separator"></div>
+                                        
+                                        <div class="form-controls-wrap mb-3">
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Normal :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <input type="text" placeholder="Enter a value" name="nrml_txtbox" id="nrml_txtbox">
+                                                </div>
+                                            </div>
+
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Disabled :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <input type="text" placeholder="Enter a value" name="ds_txtbox" id="ds_txtbox" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <p class="title bold">Select states</p>
+                                        <div class="separator"></div>
+                                        
+                                        <div class="form-controls-wrap mb-3">
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Normal :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="select">
+                                                        <select id="nrml_select" name="nrml_select">
+                                                            <option value="auto">Auto</option>
+                                                            <option value="test">test</option>
+                                                            <option value="test1">test1</option>
+                                                        </select>
+                                                        <span class="focus"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="control row">
+                                                <div class="col-left">
+                                                    <span class="control-name">Disabled :</span>
+                                                </div>
+                                                <div class="col-right">
+                                                    <div class="select">
+                                                        <select id="ds_select" name="ds_select" disabled>
+                                                            <option value="auto">Auto</option>
+                                                            <option value="test">test</option>
+                                                            <option value="test1">test1</option>
+                                                        </select>
+                                                        <span class="focus"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="page-setting__content" id="wireless_onemesh">
+                        <p>Wireless Onemesh settings</p>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
